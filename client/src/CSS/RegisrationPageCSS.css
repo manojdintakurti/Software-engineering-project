@@ -1,0 +1,24 @@
+.registration-page{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height:800px;
+}
+.radio-container {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.radio-label {
+    display: inline-block;
+    margin-right: 5px;
+    padding-left : 10px;
+}
+.gender-radio{
+    display: grid;
+}
+.registration-form{
+    margin-left:10px;
+}
+.input{
+    width: 80%;
+}

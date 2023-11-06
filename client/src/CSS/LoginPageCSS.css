@@ -1,0 +1,90 @@
+.login-page{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height:800px;
+}
+.login-page-logo{
+    background-image: url('../images/bgimage.png'); /* Replace 'your-image.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+}
+.logo-image{
+}
+.login-page-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.login-container {
+    width: 450px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.login-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 24px;
+    margin: 0;
+
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: lighter;
+    color: #666666;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;;
+}
+
+.forgot-password {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.create-account {
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 270px;
+    height:55px;
+    text-align: center;
+}
+.form-lables{
+    float:left;
+}
+.login-button{
+    width:270px;
+    height:55px;
+    border-radius: 25px;
+}
+.login-button-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.create-account-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

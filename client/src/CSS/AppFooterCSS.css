@@ -1,0 +1,40 @@
+.footer-container{
+    display: flex;
+    background-color: #333333;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.fa-brands{
+    padding: 10px;
+    cursor: pointer;
+
+}
+.contact-us{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.contact-us:hover{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.grid-col-continer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+}
+.fa-location-dot{
+    margin-top: 20px;
+}
+.footer-1-col-grid{
+    display: flex;
+    flex-direction: column;
+}
+.footer-1-col-grid p{
+    margin: 0px;
+}
+.footer-1-col-grid i{
+    margin: 5px;
+}
