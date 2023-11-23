@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/CSS/AppFooterCSS.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/CSS/LoginPageCSS.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/CSS/RegisrationPageCSS.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Components/AppFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Components/DOBSelector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Components/LoginPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Components/RegistrationPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/bgimage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+    <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="User login And User Regisration Page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +14,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/server">
       <ProjectState />
     </projectState>
   </component>
@@ -45,7 +28,21 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/server" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "manojdintakurti"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="536d43af-55c9-47a0-9f03-6ab6a1cc4fdc" />
+        <option name="url" value="https://github.com/manojdintakurti/Software-engineering-project.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,7 +66,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Software engineering/CaringPlates/client/src/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/intro to Ai/reinforcement&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -112,12 +109,27 @@
       <option name="presentableId" value="Default" />
       <updated>1699025858217</updated>
       <workItem from="1699025859315" duration="10575000" />
-      <workItem from="1699066812055" duration="4133000" />
+      <workItem from="1699066812055" duration="6880000" />
+      <workItem from="1699634734190" duration="592000" />
+      <workItem from="1700715160926" duration="943000" />
     </task>
+    <task id="LOCAL-00001" summary="User login And User Regisration Page">
+      <option name="closed" value="true" />
+      <created>1699240050705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699240050705</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="User login And User Regisration Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="User login And User Regisration Page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
