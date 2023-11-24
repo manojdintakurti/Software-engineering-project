@@ -23,7 +23,7 @@ function CreatePost(){
         formData.append('foodImage', foodImage);
 
         try {
-            const response = await fetch('http://localhost:8000/posts/create-post', {
+            const response = await fetch('http://localhost:8000/api/post/create-post', {
                 method: 'POST',
                 body: formData,
                 // Add headers if needed, e.g., content-type
@@ -119,7 +119,6 @@ function CreatePost(){
                            required={true}
                            onChange={(e) => {
                                setFoodImage(e.target.files[0]);
-
                            }}/>
                     <div className="publish-button">
                         <button type="submit" className="btn btn-dark publish-button-text">Publish Post</button>
