@@ -17,10 +17,9 @@ function CreatePost(){
         const formData = new FormData();
         formData.append('itemName', itemName);
         formData.append('quantity', quantity);
-        formData.append('preparationTime', preparationTime);
-        formData.append('pickUpBy', pickUpBy);
+        formData.append('bestBefore', pickUpBy);
         formData.append('description', description);
-        formData.append('foodImage', foodImage);
+        formData.append('imageData', foodImage);
 
         try {
             const response = await fetch('http://localhost:8000/api/post/create-post', {
@@ -51,22 +50,20 @@ function CreatePost(){
         setFoodImage(null);
     };
     return (
-        <div className={"registration-page"}>
-            <div className={"login-page-logo"}>
-            </div>
-            <div className={"create-post"}>
-                <Link to={"/home"}>Back</Link>
+        <div className="registration-page">
+            <div className="login-page-logo"></div>
+            <div className="create-post">
+                <Link to="/home">Back</Link>
                 <div>
                     <h2 className="form-heading">Food Donation Information</h2>
                 </div>
-                {postSuccess && <div className="alert alert-success" role="alert">
-                    Post Published Successfully. <Link to={"/home"}>Back to Home</Link>
-                </div>
-                }
+                {postSuccess && (
+                    <div className="alert alert-success" role="alert">
+                        Post Published Successfully. <Link to="/home">Back to Home</Link>
+                    </div>
+                )}
                 <form onSubmit={handleSubmit} className="food-donation-form">
-                    <label htmlFor="itemName">
-                        Item Name<span>*</span>:
-                    </label>
+                    <label htmlFor="itemName">Item Name<span>*</span>:</label>
                     <input
                         type="text"
                         id="itemName"
@@ -75,33 +72,18 @@ function CreatePost(){
                         required
                     />
 
-                    <label htmlFor="quantity">
-                        Quantity<span>*</span>:
-                    </label>
+                    <label htmlFor="quantity">Quantity<span>*</span>:</label>
                     <input
-                        type="text"
+                        type="number"
                         id="quantity"
                         value={quantity}
                         onChange={(e) => setQuantity(e.target.value)}
                         required
                     />
 
-                    <label htmlFor="preparationTime">
-                        Time of Preparation<span>*</span>:
-                    </label>
+                    <label htmlFor="pickUpBy">Pick Up By<span>*</span>:</label>
                     <input
-                        type="text"
-                        id="preparationTime"
-                        value={preparationTime}
-                        onChange={(e) => setPreparationTime(e.target.value)}
-                        required
-                    />
-
-                    <label htmlFor="pickUpBy">
-                        Pick Up By<span>*</span>:
-                    </label>
-                    <input
-                        type="text"
+                        type="datetime-local"
                         id="pickUpBy"
                         value={pickUpBy}
                         onChange={(e) => setPickUpBy(e.target.value)}
@@ -109,20 +91,27 @@ function CreatePost(){
                     />
 
                     <label htmlFor="description">Description:</label>
-                    <input type="text"
+                    <input
+                        type="text"
                         id="description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                     />
-                    <label htmlFor="foodImage">Food Image Uploader:</label>
-                    <input type="file" multiple accept="image/png, image/jpeg"
-                           required={true}
-                           onChange={(e) => {
-                               setFoodImage(e.target.files[0]);
-                           }}/>
-                    <div className="publish-button">
-                        <button type="submit" className="btn btn-dark publish-button-text">Publish Post</button>
 
+                    <label htmlFor="foodImage">Food Image Uploader:</label>
+                    <input
+                        type="file"
+                        accept="image/*"
+                        required={true}
+                        onChange={(e) => {
+                            setFoodImage(e.target.files && e.target.files[0]);
+                        }}
+                    />
+
+                    <div className="publish-button">
+                        <button type="submit" className="btn btn-dark publish-button-text">
+                            Publish Post
+                        </button>
                     </div>
                 </form>
             </div>
