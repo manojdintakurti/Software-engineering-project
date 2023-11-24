@@ -6,7 +6,6 @@ import {Link} from "react-router-dom";
 function CreatePost(){
     const [itemName, setItemName] = useState('');
     const [quantity, setQuantity] = useState('');
-    const [preparationTime, setPreparationTime] = useState('');
     const [pickUpBy, setPickUpBy] = useState('');
     const [description, setDescription] = useState('');
     const [foodImage, setFoodImage] = useState(null);
@@ -25,7 +24,6 @@ function CreatePost(){
             const response = await fetch('http://localhost:8000/api/post/create-post', {
                 method: 'POST',
                 body: formData,
-                // Add headers if needed, e.g., content-type
             });
 
             if (response.ok) {
