@@ -1,0 +1,85 @@
+.home-container{
+    display: grid;
+    grid-template-rows: 15% 85%;
+    height:800px;
+}
+.home-header, .home-body{
+    display: flex;
+}
+/* HeaderCSS.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.header-center {
+    flex-grow: 1; /* Takes up remaining space in the center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-post-btn {
+    padding: 10px 20px;
+    background-color: #2B2E4A;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    color: cornflowerblue;
+}
+
+.notification-icon {
+    font-size: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

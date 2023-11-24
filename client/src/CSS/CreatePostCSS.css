@@ -1,0 +1,14 @@
+.create-post{
+    margin: 20px;
+}
+.publish-button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.publish-button-text{
+    width:200px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 15px;
+}
