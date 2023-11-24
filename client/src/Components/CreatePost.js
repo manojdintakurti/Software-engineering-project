@@ -10,15 +10,17 @@ function CreatePost(){
     const [description, setDescription] = useState('');
     const [foodImage, setFoodImage] = useState(null);
     const [postSuccess, setPostSuccess] = useState(false);
+    const storedUser = sessionStorage.getItem("currentUser");
+    const user = storedUser ? JSON.parse(storedUser) : null;
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         const formData = new FormData();
         formData.append('itemName', itemName);
         formData.append('quantity', quantity);
         formData.append('bestBefore', pickUpBy);
         formData.append('description', description);
         formData.append('imageData', foodImage);
+        formData.append('userId',user?.userId);
 
         try {
             const response = await fetch('http://localhost:8000/api/post/create-post', {
@@ -42,7 +44,6 @@ function CreatePost(){
         // Clear the form fields
         setItemName('');
         setQuantity('');
-        setPreparationTime('');
         setPickUpBy('');
         setDescription('');
         setFoodImage(null);

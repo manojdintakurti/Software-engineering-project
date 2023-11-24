@@ -1,5 +1,6 @@
-import React from 'react';
-import '../CSS/CarouselCSS.css'; // Import your CSS file for styling
+import React, {useEffect, useState} from 'react';
+import '../CSS/CarouselCSS.css';
+import axios from "axios"; // Import your CSS file for styling
 
 function CarouselItem({ imageUrl, title, bestBeforeDate }) {
     return (
@@ -16,6 +17,12 @@ function CarouselItem({ imageUrl, title, bestBeforeDate }) {
 }
 
 function Carousel() {
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/post/fetch-posts")
+            .then((result) => setItems(result.data))
+            .catch(console.error);
+    },[]);
     // Replace these sample data with your actual data
     const carouselItems = [
         {
@@ -83,7 +90,7 @@ function Carousel() {
 
     return (
         <div className="carousel">
-            {carouselItems.map((item, index) => (
+            {items.map((item, index) => (
                 <CarouselItem
                     key={index}
                     imageUrl={item.imageUrl}

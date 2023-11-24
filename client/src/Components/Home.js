@@ -5,7 +5,6 @@ import {useNavigate} from "react-router";
 
 function Home(props){
     const history = useNavigate();
-
     const handleLogout = () => {
         // Perform logout actions, e.g., clear user details from session
         sessionStorage.removeItem("currentUser");
@@ -27,9 +26,10 @@ function Home(props){
                         </Link>
                     </div>
 
+
                     <div className="header-center">
                         {/* Create a Post button */}
-                        <Link to="/create-post" className="create-post-btn">Create a Post</Link>
+                        {user.role==="Restaurant" &&  <Link to="/create-post" className="create-post-btn">Create a Post</Link>}
                     </div>
 
                     <div className="header-right">

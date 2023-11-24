@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="till create posts page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/CreatePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/CreatePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +86,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "android.gradle.sync.needed": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "CARING-PLATE-FE",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "C:/Users/welcome/OneDrive/Documents/GitHub/Caring-Plates/client/src/images",
     "node.js.detected.package.eslint": "true",
@@ -268,7 +271,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/CARING-PLATE-FE" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
