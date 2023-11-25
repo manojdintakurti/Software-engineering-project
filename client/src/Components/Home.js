@@ -2,9 +2,46 @@ import "../CSS/home.css"
 import {Link} from "react-router-dom";
 import Carousel from "./Carousel";
 import {useNavigate} from "react-router";
+import Modal from "react-modal";
+import {useState} from "react";
 
 function Home(props){
     const history = useNavigate();
+    const [isModalOpen, setModalOpen] = useState(false);
+    async function fetchRestaurantProfile() {
+        try {
+            const storedUser = sessionStorage.getItem("currentUser");
+            const user = storedUser ? JSON.parse(storedUser) : null;
+            const userId = user?.userId;
+            const response = await fetch(`http://localhost:8000/api/restaurant/fetch-profile/${userId}`);
+console.log(response)
+            if (!response.ok) {
+                setModalOpen(true);
+            }else{
+                const profile = await response.json();
+
+                if (profile === null) {
+                    setModalOpen(true);
+
+                } else {
+                    // If profile has data, redirect the user to /create-post page
+                    window.location.href = '/create-post';
+                }
+            }
+
+        } catch (error) {
+            // Handle network errors or other exceptions
+            setModalOpen(true);
+
+        }
+    }
+    const closeModal = () => {
+        setModalOpen(false);
+
+        // Redirect to the login page
+        history('/restaurant-profile');
+    };
+
     const handleLogout = () => {
         // Perform logout actions, e.g., clear user details from session
         sessionStorage.removeItem("currentUser");
@@ -25,13 +62,29 @@ function Home(props){
                             Home
                         </Link>
                     </div>
-
-
                     <div className="header-center">
                         {/* Create a Post button */}
-                        {user.role==="Restaurant" &&  <Link to="/create-post" className="create-post-btn">Create a Post</Link>}
+                        {user.role==="restaurant" &&  <button onClick={fetchRestaurantProfile} className="create-post-btn">Create a Post</button>}
+                        <Modal
+                            className={"modal-body"}
+                            isOpen={isModalOpen}
+                            onRequestClose={closeModal}
+                            contentLabel="Please Create your Restaurant Profile"
+                            style={{
+                                    content: {
+                                        top: '50%',
+                                        left: '50%',
+                                        right: 'auto',
+                                        bottom: 'auto',
+                                        marginRight: '50%',
+                                        transform: 'translate(-50%, -50%)',
+                                    },}}
+                        >
+                            <p>To create a post you need to setup your restaurant Profile first</p>
+                            <button onClick={closeModal}>Create Profile
+                            </button>
+                        </Modal>
                     </div>
-
                     <div className="header-right">
                         {/* Notifications icon */}
                         <div className="notification-icon">🔔</div>

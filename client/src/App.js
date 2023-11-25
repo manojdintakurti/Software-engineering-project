@@ -10,6 +10,8 @@ import LoginPage from "./Components/LoginPage";
 import RegistrationPage from "./Components/RegistrationPage";
 import Home from "./Components/Home";
 import CreatePost from "./Components/CreatePost";
+import RestaurantProfilePage from "./Components/RestaurantProfilePage";
+import ParlorForm from "./Components/ParlorForm";
 function App() {
   return (
     <Router basename="/CaringPlates">
@@ -18,6 +20,8 @@ function App() {
             <Route path="/registration" element={<RegistrationPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/create-post" element={<CreatePost />} />
+            <Route path="/restaurant-profile" element={<RestaurantProfilePage />} />
+            <Route path="/testing" element={<ParlorForm />} />
         </Routes>
         <AppFooter />
     </Router>
