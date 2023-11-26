@@ -27,7 +27,6 @@ function CreatePost(){
                 method: 'POST',
                 body: formData,
             });
-
             if (response.ok) {
                 // Handle success, e.g., show a success message
                 setPostSuccess(true);
@@ -88,7 +87,6 @@ function CreatePost(){
                         onChange={(e) => setPickUpBy(e.target.value)}
                         required
                     />
-
                     <label htmlFor="description">Description:</label>
                     <input
                         type="text"
@@ -106,7 +104,6 @@ function CreatePost(){
                             setFoodImage(e.target.files && e.target.files[0]);
                         }}
                     />
-
                     <div className="publish-button">
                         <button type="submit" className="btn btn-dark publish-button-text">
                             Publish Post

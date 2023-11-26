@@ -14,39 +14,27 @@ function Home(props){
             const user = storedUser ? JSON.parse(storedUser) : null;
             const userId = user?.userId;
             const response = await fetch(`http://localhost:8000/api/restaurant/fetch-profile/${userId}`);
-console.log(response)
             if (!response.ok) {
                 setModalOpen(true);
             }else{
                 const profile = await response.json();
-
                 if (profile === null) {
                     setModalOpen(true);
-
                 } else {
-                    // If profile has data, redirect the user to /create-post page
-                    window.location.href = '/create-post';
+                    history('/create-post');
                 }
             }
-
         } catch (error) {
             // Handle network errors or other exceptions
             setModalOpen(true);
-
         }
     }
     const closeModal = () => {
         setModalOpen(false);
-
-        // Redirect to the login page
         history('/restaurant-profile');
     };
-
     const handleLogout = () => {
-        // Perform logout actions, e.g., clear user details from session
         sessionStorage.removeItem("currentUser");
-
-        // Redirect to the login page or wherever needed
         history("/");
     };
     const storedUser = sessionStorage.getItem("currentUser");
@@ -58,7 +46,7 @@ console.log(response)
                         {/* Logo */}
                         <img src={require("../images/icon.png")} alt="Your Logo" className="logo" width={100} height={100}/>
                         {/* Home link */}
-                        <Link to="/" className="nav-link">
+                        <Link to="/home" className="nav-link">
                             Home
                         </Link>
                     </div>

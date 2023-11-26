@@ -9,32 +9,43 @@ import { Autocomplete } from '@lob/react-address-autocomplete'
 
 
 function RestaurantProfilePage(){
-    const [restaurantName, setRestaurantName] = useState('');
+    const [name, setName] = useState('');
     const [address, setAddress] = useState('');
     const [zipcode, setZipCode] = useState('');
     const [landmark, setLandMark] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [zeoLocation, setZeoLocation] = useState('');
+    const [phone, setPhone] = useState('');
+    const [zeolocation, setZeolocation] = useState('');
     const [error, setError] = useState('');
     const history = useNavigate();
     const [isModalOpen, setModalOpen] = useState(false);
-
+    const storedUser = sessionStorage.getItem("currentUser");
+    const userJ = storedUser ? JSON.parse(storedUser) : null;
+    const user = userJ?.userId;
     const handleRestaurantProfileUpdate = async () => {
         try {
-            const response = await fetch('http://localhost:8000/api/restaurant/save-profile', {
+            const response = await fetch('http://localhost:8000/api/restaurant/create-profile', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    restaurantName,
+                    user,
+                    name,
                     address,
                     landmark,
-                    phoneNumber,
+                    phone,
                     zipcode,
-                    zeoLocation
+                    zeolocation
                 }),
             });
+            console.log(JSON.stringify({
+                name,
+                address,
+                landmark,
+                phone,
+                zipcode,
+                zeolocation
+            }))
 
             if (!response.ok) {
                 throw new Error('Registration failed. Please try again.');
@@ -55,7 +66,6 @@ function RestaurantProfilePage(){
     };
     const closeModal = () => {
         setModalOpen(false);
-
         // Redirect to the login page
         history('/create-post');
     };
@@ -68,10 +78,10 @@ function RestaurantProfilePage(){
                     <h1>Restaurant Profile Page</h1>
                     <p>*All fields required unless noted</p>
                 </div>
-                <label htmlFor="RestaurantName" className="form-lables">Restaurant Name</label>
-                <input type="text" id="RestaurantName" name="Restaurant Name"
-                       value={restaurantName}
-                       onChange={(e) => setRestaurantName(e.target.value)}
+                <label htmlFor="name" className="form-lables">Restaurant Name</label>
+                <input type="text" id="name" name="Restaurant Name"
+                       value={name}
+                       onChange={(e) => setName(e.target.value)}
                        placeholder="Enter your Restaurant Name"/>
                 <label htmlFor="Address" className="form-labels">
                     Address
@@ -104,8 +114,8 @@ function RestaurantProfilePage(){
                     type="tel"
                     id="PhoneNumber"
                     name="PhoneNumber"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     placeholder="Enter your Phone Number"
                 />
 
@@ -128,8 +138,8 @@ function RestaurantProfilePage(){
                     type="text"
                     id="GeoLocation"
                     name="GeoLocation"
-                    value={zeoLocation}
-                    onChange={(e) => setZeoLocation(e.target.value)}
+                    value={zeolocation}
+                    onChange={(e) => setZeolocation(e.target.value)}
                     placeholder="Enter your Geo Location"
                 />
 

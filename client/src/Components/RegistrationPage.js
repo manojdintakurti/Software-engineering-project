@@ -58,7 +58,6 @@ function RegistrationPage(){
     };
     const closeModal = () => {
         setModalOpen(false);
-
         // Redirect to the login page
         history('/');
     };

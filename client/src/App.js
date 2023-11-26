@@ -11,7 +11,7 @@ import RegistrationPage from "./Components/RegistrationPage";
 import Home from "./Components/Home";
 import CreatePost from "./Components/CreatePost";
 import RestaurantProfilePage from "./Components/RestaurantProfilePage";
-import ParlorForm from "./Components/ParlorForm";
+import UnderConstruction from "./Components/UnderConstruction";
 function App() {
   return (
     <Router basename="/CaringPlates">
@@ -21,7 +21,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/create-post" element={<CreatePost />} />
             <Route path="/restaurant-profile" element={<RestaurantProfilePage />} />
-            <Route path="/testing" element={<ParlorForm />} />
+            <Route path="/support" element={<UnderConstruction />} />
+
         </Routes>
         <AppFooter />
     </Router>
