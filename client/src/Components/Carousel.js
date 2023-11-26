@@ -5,12 +5,37 @@ import axios from "axios";
 function CarouselItem(item) {
     const handleClaim = async (item) => {
         try {
-            const response = await fetch('http://localhost:8000/api/post/claim', {
+            const storedUser = sessionStorage.getItem("currentUser");
+            const user = storedUser ? JSON.parse(storedUser) : null;
+            const userId = user?.userId;
+            console.log({
+                "userId":userId,
+                "restaurantId":user?.restaurantDTO?.restId,
+                "imageData":item.item?.imageData,
+                "bestBefore":item.item?.bestBefore,
+                "itemName":item.item?.title,
+                "description":item.item?.description,
+                "claimed":item.item?.claimed,
+                "quantity":item.item?.quantity,
+                "postId":item.item?.postID
+            });
+            const response = await fetch(`http://localhost:8000/api/post/claim-post/${userId}`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(item),
+                header:{
+                    'Content-Type': 'formData/Multipart'
+                }
+                ,
+                body: JSON.stringify({
+                    "userId":userId,
+                    "restaurantId":user?.restaurantDTO?.restId,
+                    "imageData":item.item?.imageData,
+                    "bestBefore":item.item?.bestBefore,
+                    "itemName":item.item?.title,
+                    "description":item.item?.description,
+                    "claimed":item.item?.claimed,
+                    "quantity":item.item?.quantity,
+                    "postId":item.item?.postID
+                },)
             });
 
             if (!response.ok) {
@@ -18,6 +43,7 @@ function CarouselItem(item) {
             }
             const data = await response.json();
             console.log('Success:', data);
+            item.reloadComponent();
         } catch (error) {
             console.error('Error during fetch:', error.message);
         }
@@ -37,6 +63,12 @@ function CarouselItem(item) {
 
 function Carousel() {
     const [items, setItems] = useState([]);
+    const [reloadCounter, setReloadCounter] = useState(0);
+    const reloadComponent = () => {
+        // Update the state to trigger a re-render
+        setReloadCounter(reloadCounter + 1);
+    };
+
     useEffect(() => {
         axios.get("http://localhost:8000/api/post/fetch-posts")
             .then((result) => setItems(result.data))
@@ -48,6 +80,7 @@ function Carousel() {
                 <CarouselItem
                     key={index}
                     item={item}
+                    reloadComponent = {reloadComponent}
                 />
             ))}
         </div>

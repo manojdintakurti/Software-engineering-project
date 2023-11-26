@@ -21,6 +21,7 @@ function RestaurantProfilePage(){
     const storedUser = sessionStorage.getItem("currentUser");
     const userJ = storedUser ? JSON.parse(storedUser) : null;
     const user = userJ?.userId;
+    const restaurantId = userJ?.restaurantDTO?.restId;
     const handleRestaurantProfileUpdate = async () => {
         try {
             const response = await fetch('http://localhost:8000/api/restaurant/create-profile', {
@@ -30,6 +31,7 @@ function RestaurantProfilePage(){
                 },
                 body: JSON.stringify({
                     user,
+                    restaurantId,
                     name,
                     address,
                     landmark,
@@ -55,6 +57,7 @@ function RestaurantProfilePage(){
 
             if (result !== null) {
                 // Redirect to login page on successful registration
+
                 setModalOpen(true);
             } else {
                 // Handle registration failure, e.g., display an error message
