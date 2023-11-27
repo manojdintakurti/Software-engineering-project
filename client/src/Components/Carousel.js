@@ -8,6 +8,18 @@ function CarouselItem(item) {
             const storedUser = sessionStorage.getItem("currentUser");
             const user = storedUser ? JSON.parse(storedUser) : null;
             const userId = user?.userId;
+
+            const formData = new FormData();
+            formData.append('userId', userId);
+            formData.append('restaurantId', user?.restaurantDTO?.restId);
+            formData.append('imageData', new Blob([new Uint8Array(item.item?.imageData)], { type: 'image/jpeg' }));
+            formData.append('bestBefore', item.item?.bestBefore);
+            formData.append('itemName',item.item?.title );
+            formData.append('description',item.item?.description);
+            formData.append('claimed', item.item?.claimed);
+            formData.append('quantity',item.item?.quantity);
+            formData.append('postId',item.item?.postID);
+
             console.log({
                 "userId":userId,
                 "restaurantId":user?.restaurantDTO?.restId,
@@ -21,21 +33,7 @@ function CarouselItem(item) {
             });
             const response = await fetch(`http://localhost:8000/api/post/claim-post/${userId}`, {
                 method: 'POST',
-                header:{
-                    'Content-Type': 'formData/Multipart'
-                }
-                ,
-                body: JSON.stringify({
-                    "userId":userId,
-                    "restaurantId":user?.restaurantDTO?.restId,
-                    "imageData":item.item?.imageData,
-                    "bestBefore":item.item?.bestBefore,
-                    "itemName":item.item?.title,
-                    "description":item.item?.description,
-                    "claimed":item.item?.claimed,
-                    "quantity":item.item?.quantity,
-                    "postId":item.item?.postID
-                },)
+                body: formData
             });
 
             if (!response.ok) {
