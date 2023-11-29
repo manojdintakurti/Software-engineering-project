@@ -1,14 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import '../CSS/CarouselCSS.css';
 import axios from "axios";
+import Modal from "react-modal";
 
 function CarouselItem(item) {
+    const [isModalOpen, setModalOpen] = useState(false);
+    const closeModal = () => {
+        setModalOpen(false);
+        window.location.reload();
+    };
     const handleClaim = async (item) => {
         try {
             const storedUser = sessionStorage.getItem("currentUser");
             const user = storedUser ? JSON.parse(storedUser) : null;
             const userId = user?.userId;
-
             const formData = new FormData();
             formData.append('userId', userId);
             formData.append('restaurantId', user?.restaurantDTO?.restId);
@@ -19,29 +24,17 @@ function CarouselItem(item) {
             formData.append('claimed', item.item?.claimed);
             formData.append('quantity',item.item?.quantity);
             formData.append('postId',item.item?.postID);
-
-            console.log({
-                "userId":userId,
-                "restaurantId":user?.restaurantDTO?.restId,
-                "imageData":item.item?.imageData,
-                "bestBefore":item.item?.bestBefore,
-                "itemName":item.item?.title,
-                "description":item.item?.description,
-                "claimed":item.item?.claimed,
-                "quantity":item.item?.quantity,
-                "postId":item.item?.postID
-            });
             const response = await fetch(`http://localhost:8000/api/post/claim-post/${userId}`, {
                 method: 'POST',
                 body: formData
             });
-
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            console.log('Success:', data);
-            item.reloadComponent();
+            if(data){
+                setModalOpen(true)
+            }
         } catch (error) {
             console.error('Error during fetch:', error.message);
         }
@@ -55,6 +48,42 @@ function CarouselItem(item) {
                 <button className="claim-button" onClick={() => handleClaim(item)}>
                     <i className={"fas fa-shopping-cart"}></i>   Claim Now</button>
             </div>
+            <Modal
+                isOpen={isModalOpen}
+                onRequestClose={closeModal}
+                contentLabel="Claimed Successfully"
+                style={{
+                    overlay: {
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(255, 255, 255, 0.75)'
+                    },
+                    content: {
+                        display: "flex",
+                        justifyContent:"center",
+                        flexDirection:"column",
+                        width:'400px',
+                        position: 'absolute',
+                        top: '200px',
+                        left: '600px',
+                        right: '40px',
+                        bottom: '40px',
+                        border: '1px solid #ccc',
+                        background: '#fff',
+                        WebkitOverflowScrolling: 'touch',
+                        borderRadius: '4px',
+                        outline: 'none',
+                        padding: '20px'
+                    }
+                }}
+            >
+                <h2>Claimed Successfully!</h2>
+                <p>Please check your email for more details</p>
+                <button onClick={closeModal}>OK</button>
+            </Modal>
         </div>
     );
 }
@@ -63,7 +92,6 @@ function Carousel() {
     const [items, setItems] = useState([]);
     const [reloadCounter, setReloadCounter] = useState(0);
     const reloadComponent = () => {
-        // Update the state to trigger a re-render
         setReloadCounter(reloadCounter + 1);
     };
 
@@ -79,6 +107,7 @@ function Carousel() {
                     key={index}
                     item={item}
                     reloadComponent = {reloadComponent}
+
                 />
             ))}
         </div>

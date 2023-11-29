@@ -53,3 +53,7 @@ flex-wrap: wrap;
     margin-top: 10px;
     border-radius: 15px;
 }
+.claimed-modal{
+    width:300px;
+    height:500px;
+}

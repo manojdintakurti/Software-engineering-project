@@ -59,14 +59,32 @@ function Home(props){
                             onRequestClose={closeModal}
                             contentLabel="Please Create your Restaurant Profile"
                             style={{
-                                    content: {
-                                        top: '50%',
-                                        left: '50%',
-                                        right: 'auto',
-                                        bottom: 'auto',
-                                        marginRight: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                    },}}
+                                overlay: {
+                                    position: 'fixed',
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    backgroundColor: 'rgba(255, 255, 255, 0.75)'
+                                },
+                                content: {
+                                    display: "flex",
+                                    justifyContent:"center",
+                                    flexDirection:"column",
+                                    width:'400px',
+                                    position: 'absolute',
+                                    top: '200px',
+                                    left: '600px',
+                                    right: '40px',
+                                    bottom: '40px',
+                                    border: '1px solid #ccc',
+                                    background: '#fff',
+                                    WebkitOverflowScrolling: 'touch',
+                                    borderRadius: '4px',
+                                    outline: 'none',
+                                    padding: '20px'
+                                }
+                            }}
                         >
                             <p>To create a post you need to setup your restaurant Profile first</p>
                             <button onClick={closeModal}>Create Profile
