@@ -12,7 +12,8 @@ function AppFooter(){
                     <p  className="pad-right">Falls Church, VA</p>
                 </div>
             </div>
-            <p className="footer-1-col">&copy; Caring Plates. All Rights Reserved.</p>
+            <p className="footer-1-col">&copy; Caring Plates. All Rights Reserved.
+            <Link to="/support">Get in touch</Link></p>
             <div className="social-media-icons footer-2col" >
                 <i className="fa-brands fa-facebook fa-2xl"></i>
                 <i className="fa-brands fa-linkedin fa-2xl"></i>

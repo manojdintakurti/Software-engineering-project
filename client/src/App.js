@@ -13,6 +13,7 @@ import CreatePost from "./Components/CreatePost";
 import RestaurantProfilePage from "./Components/RestaurantProfilePage";
 import UnderConstruction from "./Components/UnderConstruction";
 import NotificationDropdown from "./Components/NotificationDropdown";
+import GetInTouchForm from "./Components/GetInTouchForm";
 function App() {
   return (
     <Router basename="/CaringPlates">
@@ -22,7 +23,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/create-post" element={<CreatePost />} />
             <Route path="/restaurant-profile" element={<RestaurantProfilePage />} />
-            <Route path="/support" element={<UnderConstruction />} />
+            <Route path="/support" element={<GetInTouchForm />} />
             <Route path={"/notifications"} element={<NotificationDropdown/>}></Route>
         </Routes>
         <AppFooter />

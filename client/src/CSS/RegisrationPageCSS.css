@@ -26,3 +26,6 @@
 .input{
     width: 80%;
 }
+.date-of-birth-div{
+    display: flex;
+}

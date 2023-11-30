@@ -15,9 +15,9 @@ function RegistrationPage(){
     const [lastName, setLastName] = useState(user?.lastName);
     const [password, setPassword] = useState('');
     const [gender, setGender] = useState(user?.gender);
-    const [phoneNumber, setPhoneNumber] = useState(user?.phone);
-    const [dateOfBirth, setDateOfBirth] = useState(new Date()); // Use null as the initial state
-    const [role, setRole] = useState(user?.role); // Setting a default value for the role
+    const [phoneNumber, setPhoneNumber] = useState(user?user.phone:"");
+    const [dateOfBirth, setDateOfBirth] = useState(new Date());
+    const [role, setRole] = useState(user?.role);
     const [error, setError] = useState('');
     const history = useNavigate();
     const [isModalOpen, setModalOpen] = useState(false);
@@ -101,7 +101,6 @@ function RegistrationPage(){
                 <label htmlFor="Phone Number" className="form-lables">Password</label>
                 <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number"
                        value={phoneNumber}
-                       defaultValue={user.phoneNumber}
                        onChange={(e) => setPhoneNumber(e.target.value)}
                 />
 
@@ -119,16 +118,19 @@ function RegistrationPage(){
                         />
                     </div>
                 </div>
-                <label>Date of Birth</label>
-                <DatePicker
-                    className={"date-picker"}
-                    id="dob"
-                    inputProps={{ placeholder: 'Select Date of Birth' }}
-                    value={dateOfBirth}
-                    selected={dateOfBirth}
-                    onChange={(date) => setDateOfBirth(date)}
-                    dateFormat="dd/M/yyyy" // Customize the date format
-                />
+                <div className={"date-of-birth-div"}>
+                    <label>Date of Birth</label>
+                    <DatePicker
+                        className={"date-picker"}
+                        id="dob"
+                        inputProps={{ placeholder: 'Select Date of Birth' }}
+                        value={dateOfBirth}
+                        selected={dateOfBirth}
+                        onChange={(date) => setDateOfBirth(date)}
+                        dateFormat="dd/M/yyyy" // Customize the date format
+                    />
+                </div>
+
                 <div className={"gender-radio"}>
                     <label htmlFor="role">Select a role:</label>
                     <select
