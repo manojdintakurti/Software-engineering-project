@@ -64,6 +64,9 @@
     margin-right: 20px;
     cursor: pointer;
 }
+.notification-icon:hover{
+    text-decoration: None;
+}
 
 .dropdown {
     position: relative;

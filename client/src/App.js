@@ -12,6 +12,7 @@ import Home from "./Components/Home";
 import CreatePost from "./Components/CreatePost";
 import RestaurantProfilePage from "./Components/RestaurantProfilePage";
 import UnderConstruction from "./Components/UnderConstruction";
+import NotificationDropdown from "./Components/NotificationDropdown";
 function App() {
   return (
     <Router basename="/CaringPlates">
@@ -22,7 +23,7 @@ function App() {
             <Route path="/create-post" element={<CreatePost />} />
             <Route path="/restaurant-profile" element={<RestaurantProfilePage />} />
             <Route path="/support" element={<UnderConstruction />} />
-
+            <Route path={"/notifications"} element={<NotificationDropdown/>}></Route>
         </Routes>
         <AppFooter />
     </Router>

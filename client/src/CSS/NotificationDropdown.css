@@ -1,0 +1,42 @@
+.notification-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    display: none;
+    max-height: 500px; /* Set a maximum height for the dropdown */
+    overflow-y: auto; /* Add a scrollbar when content exceeds the maximum height */
+}
+
+.notification-container:hover .notification-dropdown {
+    display: block;
+}
+
+.notification-box {
+    width: 300px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    list-style: none; /* Remove default list styling */
+}
+
+
+
+.notification-button{
+    width: 100px;
+    border: None;
+    background: None;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}

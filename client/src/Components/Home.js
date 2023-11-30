@@ -4,6 +4,7 @@ import Carousel from "./Carousel";
 import {useNavigate} from "react-router";
 import Modal from "react-modal";
 import {useState} from "react";
+import NotificationDropdown from "./NotificationDropdown";
 
 function Home(props){
     const history = useNavigate();
@@ -93,8 +94,7 @@ function Home(props){
                     </div>
                     <div className="header-right">
                         {/* Notifications icon */}
-                        <div className="notification-icon">🔔</div>
-
+                        <NotificationDropdown/>
                         {/* Support link */}
                         <Link to="/support" className="nav-link">
                             <img src={require("../images/img.png")}  width={25} height={25}/>
