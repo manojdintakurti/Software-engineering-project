@@ -98,7 +98,7 @@ function RegistrationPage(){
                        value={password}
                        onChange={(e) => setPassword(e.target.value)}
                 />
-                <label htmlFor="Phone Number" className="form-lables">Password</label>
+                <label htmlFor="Phone Number" className="form-lables">Phone Number</label>
                 <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number"
                        value={phoneNumber}
                        onChange={(e) => setPhoneNumber(e.target.value)}
