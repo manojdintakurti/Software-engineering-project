@@ -3,17 +3,33 @@ import {Link} from "react-router-dom";
 import Carousel from "./Carousel";
 import {useNavigate} from "react-router";
 import Modal from "react-modal";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import NotificationDropdown from "./NotificationDropdown";
 
 function Home(props){
+    const storedUser = sessionStorage.getItem("currentUser");
+    const user = storedUser ? JSON.parse(storedUser) : null;
+    const userId = user?.userId;
     const history = useNavigate();
     const [isModalOpen, setModalOpen] = useState(false);
+    const [rewardPoints, setRewardPoints] = useState(0);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch(`http://localhost:8000/api/post/rewards/${userId}`);
+            const data = await response.json();
+            console.log(data);
+            setRewardPoints(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
     async function fetchRestaurantProfile() {
         try {
-            const storedUser = sessionStorage.getItem("currentUser");
-            const user = storedUser ? JSON.parse(storedUser) : null;
-            const userId = user?.userId;
             const response = await fetch(`http://localhost:8000/api/restaurant/fetch-profile/${userId}`);
             if (!response.ok) {
                 setModalOpen(true);
@@ -38,8 +54,6 @@ function Home(props){
         sessionStorage.removeItem("currentUser");
         history("/");
     };
-    const storedUser = sessionStorage.getItem("currentUser");
-    const user = storedUser ? JSON.parse(storedUser) : null;
     return (
         <div className={"home-container"}>
                 <div className={"home-header"}>
@@ -54,6 +68,7 @@ function Home(props){
                     <div className="header-center">
                         {/* Create a Post button */}
                         {user.role==="restaurant" &&  <button onClick={fetchRestaurantProfile} className="create-post-btn">Create a Post</button>}
+                        {user.role!=="restaurant" &&  <button  className="create-post-btn">Reward Points: {rewardPoints}</button>}
                         <Modal
                             className={"modal-body"}
                             isOpen={isModalOpen}
@@ -107,8 +122,13 @@ function Home(props){
                                 Hi, {user?.firstName}
                             </Link>
                             <div className="dropdown-menu">
-                                <Link to="/user-profile" className="dropdown-item">
-                                    Profile
+                                {user.role==="restaurant" &&
+                                    <Link to="/restaurant-profile" className="dropdown-item">
+                                        Restaurant Profile
+                                    </Link>
+                                }
+                                <Link to="/registration" className="dropdown-item">
+                                    User Profile
                                 </Link>
                                 <button onClick={handleLogout} className="dropdown-item">
                                     Logout

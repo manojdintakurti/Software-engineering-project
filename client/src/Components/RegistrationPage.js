@@ -8,14 +8,16 @@ import 'react-datepicker/dist/react-datepicker.css'
 import Modal from 'react-modal';
 
 function RegistrationPage(){
-    const [email, setEmail] = useState('');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const storedUser = sessionStorage.getItem("currentUser");
+    const user = storedUser ? JSON.parse(storedUser) : null;
+    const [email, setEmail] = useState(user?.email);
+    const [firstName, setFirstName] = useState(user?.firstName);
+    const [lastName, setLastName] = useState(user?.lastName);
     const [password, setPassword] = useState('');
-    const [gender, setGender] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
+    const [gender, setGender] = useState(user?.gender);
+    const [phoneNumber, setPhoneNumber] = useState(user?.phone);
     const [dateOfBirth, setDateOfBirth] = useState(new Date()); // Use null as the initial state
-    const [role, setRole] = useState('ngo'); // Setting a default value for the role
+    const [role, setRole] = useState(user?.role); // Setting a default value for the role
     const [error, setError] = useState('');
     const history = useNavigate();
     const [isModalOpen, setModalOpen] = useState(false);
@@ -76,7 +78,8 @@ function RegistrationPage(){
                 <input type="text" id="email" name="email"
                        value={email}
                        onChange={(e) => setEmail(e.target.value)}
-                       placeholder="Enter your email"/>
+                       placeholder="Enter your email"
+                />
 
                 <label htmlFor="firstName" className="form-lables">First Name</label>
                 <input type="text" id="firstName" name="first Name" placeholder="Enter your First Name"
@@ -98,6 +101,7 @@ function RegistrationPage(){
                 <label htmlFor="Phone Number" className="form-lables">Password</label>
                 <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number"
                        value={phoneNumber}
+                       defaultValue={user.phoneNumber}
                        onChange={(e) => setPhoneNumber(e.target.value)}
                 />
 

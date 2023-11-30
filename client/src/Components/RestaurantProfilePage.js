@@ -1,20 +1,23 @@
 import "../CSS/LoginPageCSS.css"
 import "../CSS/RegisrationPageCSS.css"
 import {Link} from "react-router-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useNavigate} from "react-router";
 import 'react-datepicker/dist/react-datepicker.css'
 import Modal from 'react-modal';
-import { Autocomplete } from '@lob/react-address-autocomplete'
 
 
-function RestaurantProfilePage(){
-    const [name, setName] = useState('');
-    const [address, setAddress] = useState('');
-    const [zipcode, setZipCode] = useState('');
-    const [landmark, setLandMark] = useState('');
-    const [phone, setPhone] = useState('');
-    const [zeolocation, setZeolocation] = useState('');
+function RestaurantProfilePage() {
+    const [restaurantProfile, setRestaurantProfile] = useState(null);
+    const storedUserIn = sessionStorage.getItem("currentUser");
+    const userFec = storedUserIn ? JSON.parse(storedUserIn) : null;
+    const userId = userFec?.userId;
+    const [name, setName] = useState(userFec.restaurantDTO?.name);
+    const [address, setAddress] = useState(userFec.restaurantDTO?.address);
+    const [zipcode, setZipCode] = useState(userFec.restaurantDTO?.zipcode);
+    const [landmark, setLandMark] = useState(userFec.restaurantDTO?.landmark);
+    const [phone, setPhone] = useState(userFec.restaurantDTO?.phone);
+    const [zeolocation, setZeolocation] = useState(userFec.restaurantDTO?.zeolocation);
     const [error, setError] = useState('');
     const history = useNavigate();
     const [isModalOpen, setModalOpen] = useState(false);
@@ -163,11 +166,11 @@ function RestaurantProfilePage(){
                     <p>Restaurant Profile has been saved successfully</p>
                     <button onClick={closeModal}>OK</button>
                 </Modal>
-                <Autocomplete
-                    onPlaceSelected={(place) => {
-                        console.log(place);
-                    }}
-                />;
+                {/*<Autocomplete*/}
+                {/*    onPlaceSelected={(place) => {*/}
+                {/*        console.log(place);*/}
+                {/*    }}*/}
+                {/*/>;*/}
             </div>
         </div>
     )
