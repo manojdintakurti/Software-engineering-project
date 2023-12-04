@@ -49,7 +49,7 @@ function CreatePost(){
     };
     return (
         <div className="registration-page">
-            <div className="login-page-logo"></div>
+            <div className="create-post-logo"></div>
             <div className="create-post">
                 <Link to="/home">Back</Link>
                 <div>

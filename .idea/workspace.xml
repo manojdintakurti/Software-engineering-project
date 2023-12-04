@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="till create posts page">
+    <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="naming changes">
+      <change afterPath="$PROJECT_DIR$/client/src/images/CREATEpOST.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/CreateyourProfile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/backgroundHome.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/img_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CSS/AppFooterCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/AppFooterCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CSS/CarouselCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/CarouselCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CSS/LoginPageCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/LoginPageCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CSS/RegisrationPageCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/RegisrationPageCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/AppFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/AppFooter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/CreatePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/CreatePost.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/RegistrationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/RegistrationPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +107,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "f388e2a0991e057a0316947c380806f0",
+    "spring.configuration.checksum": "ae64512696574d32224a15f17371d7ec",
     "ts.external.directory.path": "C:\\Users\\welcome\\OneDrive\\Documents\\GitHub\\Caring-Plates\\client\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -105,16 +117,17 @@
       <map>
         <entry key="com.haulmont.rcb.reactComponents" value="false" />
         <entry key="com.haulmont.rcb.reactInspector" value="false" />
+        <entry key="com.haulmont.rcb.storybook" value="false" />
       </map>
     </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\welcome\OneDrive\Documents\GitHub\Caring-Plates\client\src\images" />
+      <recent name="C:\Users\welcome\OneDrive\Documents\GitHub\Caring-Plates\client\src\CSS" />
+      <recent name="C:\Users\welcome\OneDrive\Documents\GitHub\Caring-Plates\client\src\Components" />
       <recent name="C:\Users\welcome\OneDrive\Documents\GitHub\Caring-Plates\server" />
       <recent name="D:\Software engineering\CaringPlates\client\src\images" />
-      <recent name="D:\Software engineering\CaringPlates\client\CSS" />
-      <recent name="D:\Software engineering\CaringPlates\client\Components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Software engineering\CaringPlates\client\src" />
@@ -216,8 +229,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.server [build]" />
         <item itemvalue="Gradle.server [clean]" />
+        <item itemvalue="Gradle.server [build]" />
         <item itemvalue="Gradle.Caring-Plates [build]" />
       </list>
     </recent_temporary>
@@ -235,6 +248,10 @@
       <workItem from="1699634734190" duration="592000" />
       <workItem from="1700715160926" duration="1597000" />
       <workItem from="1700719022902" duration="30862000" />
+      <workItem from="1701236624369" duration="17247000" />
+      <workItem from="1701355722836" duration="1035000" />
+      <workItem from="1701407026932" duration="2074000" />
+      <workItem from="1701705271410" duration="9579000" />
     </task>
     <task id="LOCAL-00001" summary="User login And User Regisration Page">
       <option name="closed" value="true" />
@@ -260,7 +277,103 @@
       <option name="project" value="LOCAL" />
       <updated>1700795065815</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fetch posts">
+      <option name="closed" value="true" />
+      <created>1700813558339</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700813558339</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fetching posts and display">
+      <option name="closed" value="true" />
+      <created>1700900136629</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700900136629</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fetching posts and display">
+      <option name="closed" value="true" />
+      <created>1700976616983</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700976616983</updated>
+    </task>
+    <task id="LOCAL-00007" summary="claim now button">
+      <option name="closed" value="true" />
+      <created>1700986497735</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700986497736</updated>
+    </task>
+    <task id="LOCAL-00008" summary="claim now working commit">
+      <option name="closed" value="true" />
+      <created>1701064774100</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701064774100</updated>
+    </task>
+    <task id="LOCAL-00009" summary="claim now working commit">
+      <option name="closed" value="true" />
+      <created>1701289833873</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701289833873</updated>
+    </task>
+    <task id="LOCAL-00010" summary="claim bug fix">
+      <option name="closed" value="true" />
+      <created>1701317380354</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701317380354</updated>
+    </task>
+    <task id="LOCAL-00011" summary="user profile page and restaurant profile page updates">
+      <option name="closed" value="true" />
+      <created>1701325793591</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701325793591</updated>
+    </task>
+    <task id="LOCAL-00012" summary="get in touch">
+      <option name="closed" value="true" />
+      <created>1701326925900</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701326925900</updated>
+    </task>
+    <task id="LOCAL-00013" summary="get in touch form">
+      <option name="closed" value="true" />
+      <created>1701327247258</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701327247258</updated>
+    </task>
+    <task id="LOCAL-00014" summary="get in touch form css fix">
+      <option name="closed" value="true" />
+      <created>1701327263218</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701327263218</updated>
+    </task>
+    <task id="LOCAL-00015" summary="naming changes">
+      <option name="closed" value="true" />
+      <created>1701331456388</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701331456388</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +406,17 @@
     <MESSAGE value="User login And User Regisration Page" />
     <MESSAGE value="adding server module" />
     <MESSAGE value="till create posts page" />
-    <option name="LAST_COMMIT_MESSAGE" value="till create posts page" />
+    <MESSAGE value="fetch posts" />
+    <MESSAGE value="fetching posts and display" />
+    <MESSAGE value="claim now button" />
+    <MESSAGE value="claim now working commit" />
+    <MESSAGE value="claim bug fix" />
+    <MESSAGE value="user profile page and restaurant profile page updates" />
+    <MESSAGE value="get in touch" />
+    <MESSAGE value="get in touch form" />
+    <MESSAGE value="get in touch form css fix" />
+    <MESSAGE value="naming changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="naming changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

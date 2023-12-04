@@ -5,6 +5,9 @@
     align-items: center;
     color: white;
 }
+.footer-container *{
+    color: white;
+}
 .fa-brands{
     padding: 10px;
     cursor: pointer;

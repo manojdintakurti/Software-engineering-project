@@ -138,7 +138,7 @@ function Home(props){
                     </div>
                 </div>
             <div className={"home-body"}>
-                <Carousel />
+                <Carousel className={"carousel-bg"} />
             </div>
         </div>
     );

@@ -1,29 +1,107 @@
+/*.carousel {*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*flex-wrap: wrap;*/
+/*    overflow-y: scroll;*/
+/*    overflow-x: hidden;*/
+/*    justify-content: flex-start;*/
+/*}*/
+
+/*.carousel-item {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    box-sizing: border-box;*/
+/*    border: 1px solid #61dafb;*/
+/*    width: 290px;*/
+/*    height: 350px;*/
+/*    margin: 5px;*/
+/*    padding: 4px;*/
+
+/*}*/
+
+/*.carousel-image {*/
+/*    width: 200px;*/
+/*    height: 310px;*/
+/*    object-fit: cover; !* Maintain aspect ratio *!*/
+/*}*/
+
+/*.carousel-content {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    padding: 10px;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*.title {*/
+/*    font-size: 27px;*/
+/*    margin: 5px 0;*/
+/*}*/
+
+/*.best-before {*/
+/*    font-size: 20px;*/
+/*    margin: 5px 0;*/
+/*}*/
+
+/*.claim-button {*/
+/*    background-color: cornflowerblue;*/
+/*    color: white;*/
+/*    padding: 8px 15px;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    margin-top: 10px;*/
+/*    border-radius: 15px;*/
+/*}*/
+/*.claimed-modal{*/
+/*    width:300px;*/
+/*    height:500px;*/
+/*}*/
+
+
 .carousel {
     display: flex;
     width: 100%;
-flex-wrap: wrap;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll  ; /* Removed scroll for a cleaner look */
+    justify-content: space-evenly; /* Adjusted alignment */
+
+    background-image: url('../images/backgroundHome.jpg'); /* Replace 'your-image.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
 }
+.carousel::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background-color: rgba(255, 255, 255, 0.0); /* Adjust the alpha value to control the transparency */
+ }
+
+
 
 .carousel-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    border: 1px solid #61dafb;
-    width: 290px;
-    height: 350px;
-    margin: 5px;
-    padding: 4px;
-
+    border: 1px solid #ddd; /* Changed border color */
+    width: 300px; /* Slightly increased width */
+    height: 400px; /* Slightly increased height */
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff; /* Added a white background */
+    border-radius: 10px; /* Added border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle box shadow */
 }
 
 .carousel-image {
-    width: 200px;
-    height: 310px;
-    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%; /* Made the image responsive to the container */
+    height: 200px; /* Adjusted height for better proportions */
+    object-fit: cover;
+    border-radius: 8px; /* Rounded corners for the image */
 }
 
 .carousel-content {
@@ -35,25 +113,32 @@ flex-wrap: wrap;
 }
 
 .title {
-    font-size: 27px;
-    margin: 5px 0;
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 .best-before {
-    font-size: 20px;
+    font-size: 1.2rem;
     margin: 5px 0;
+    color: #555; /* Changed color for a softer look */
 }
 
 .claim-button {
-    background-color: cornflowerblue;
+    background-color: #3498db;
     color: white;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
-    border-radius: 15px;
+    margin-top: 15px;
+    border-radius: 20px; /* Increased border radius for a rounded button */
+    transition: background-color 0.3s ease; /* Added transition for a smooth hover effect */
 }
-.claimed-modal{
-    width:300px;
-    height:500px;
+
+.claim-button:hover {
+    background-color: #2980b9;
+}
+
+.claimed-modal {
+    width: 300px;
+    height: 500px;
 }

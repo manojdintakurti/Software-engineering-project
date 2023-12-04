@@ -65,7 +65,7 @@ function RegistrationPage(){
     };
     return (
         <div className={"registration-page"}>
-            <div className={"login-page-logo"}>
+            <div className={"registration-page-logo"}>
             </div>
 
             <div className={"registration-form"}>

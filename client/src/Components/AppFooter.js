@@ -7,7 +7,7 @@ function AppFooter(){
             <div className="footer-1-col-grid">
                 {/*<Link to="/contactus" className="contact-us">Contact Us</Link>*/}
                 <div className="grid-col-continer">
-                    <p  className="footer-1-col">Store Location:</p>
+                    <p  className="footer-1-col">Location:</p>
                     <i className="fa-solid fa-location-dot" ></i>
                     <p  className="pad-right">Falls Church, VA</p>
                 </div>

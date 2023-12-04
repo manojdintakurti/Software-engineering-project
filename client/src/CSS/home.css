@@ -2,12 +2,31 @@
     display: grid;
     grid-template-rows: 15% 85%;
     height:800px;
+    background-color: #ecf7fb;
 }
-.home-header, .home-body{
+.home-body {
     display: flex;
 }
-/* HeaderCSS.css */
+.carousel-bg{
+    background-image: url('../images/backgroundHome.jpg'); /* Replace 'your-image.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+}
+.carousel-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust the alpha value to control the transparency */
+}
 
+/* HeaderCSS.css */
+.home-header{
+    display: flex;
+    background-color: #3498db;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -57,6 +76,10 @@
     display: flex;
     align-items: center;
     color: cornflowerblue;
+    font-size: 30px;
+}
+.home-header * {
+    font-size: 25px;
 }
 
 .notification-icon {
@@ -85,4 +108,16 @@
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.header-right a:hover,
+.header-right *:hover {
+    color: #70a9ff; /* Change to the desired grey color */
+    /* You can also add other hover effects like background-color or text-decoration if needed */
+}
+
+.home-background{
+    background-image: url('../images/backgroundHome.jpg'); /* Replace 'your-image.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
 }
