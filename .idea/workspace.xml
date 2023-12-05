@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="images and css">
+    <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="Readme file update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CSS/CarouselCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/CarouselCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +237,7 @@
       <workItem from="1701236624369" duration="17247000" />
       <workItem from="1701355722836" duration="1035000" />
       <workItem from="1701407026932" duration="2074000" />
-      <workItem from="1701705271410" duration="14912000" />
+      <workItem from="1701705271410" duration="15788000" />
     </task>
     <task id="LOCAL-00001" summary="User login And User Regisration Page">
       <option name="closed" value="true" />
@@ -370,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701718277938</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Readme file update">
+      <option name="closed" value="true" />
+      <created>1701818891213</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701818891213</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +419,8 @@
     <MESSAGE value="get in touch form css fix" />
     <MESSAGE value="naming changes" />
     <MESSAGE value="images and css" />
-    <option name="LAST_COMMIT_MESSAGE" value="images and css" />
+    <MESSAGE value="Readme file update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme file update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

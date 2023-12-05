@@ -3,6 +3,9 @@
 # Introduction
 "Caring Plates" is a revolutionary application developed as part of the Software Engineering coursework at Virginia Tech. This innovative platform serves as a bridge connecting restaurant owners with NGOs, aiming to combat food waste and contribute to helping those in need.
 
+# Unit Test Cases:
+We have meticulously crafted comprehensive test cases for all controllers and service classes, ensuring a thorough examination of our application's functionality. Our commitment to quality is reflected in the excellent code coverage achieved, as verified by SonarQube.
+
 # Acceptance Criteria:
 1. **User Registration**:
    Upon providing all necessary details and clicking "register," users receive a success confirmation and are seamlessly directed to the login page.
