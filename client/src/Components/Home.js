@@ -60,10 +60,12 @@ function Home(props){
                     <div className="header-left">
                         {/* Logo */}
                         <img src={require("../images/icon.png")} alt="Your Logo" className="logo" width={100} height={100}/>
+                        <h1 className={"logo-text"}>Caring Plates</h1>
                         {/* Home link */}
                         <Link to="/home" className="nav-link">
                             Home
                         </Link>
+
                     </div>
                     <div className="header-center">
                         {/* Create a Post button */}

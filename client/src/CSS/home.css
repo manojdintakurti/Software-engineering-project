@@ -41,9 +41,16 @@
 }
 
 .logo {
-    width: 100px; /* Adjust the width as needed */
-    height: auto;
+    width: 100px;
+    height: 100px; /* Set the height to match the width for a perfect circle */
+    border-radius: 50%; /* Make it circular */
     margin-right: 10px;
+    object-fit: cover; /* Ensure the image covers the entire circular space */
+}
+.logo-text{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
 }
 
 .nav-link {

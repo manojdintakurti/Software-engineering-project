@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="naming changes">
-      <change afterPath="$PROJECT_DIR$/client/src/images/CREATEpOST.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/CreateyourProfile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/backgroundHome.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/img_1.png" afterDir="false" />
+    <list default="true" id="756419b1-47e0-4338-a38f-3bde3e12fa4d" name="Changes" comment="images and css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CSS/AppFooterCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/AppFooterCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/CSS/CarouselCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/CarouselCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CSS/LoginPageCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/LoginPageCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CSS/RegisrationPageCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/RegisrationPageCSS.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CSS/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/AppFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/AppFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/CreatePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/CreatePost.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/RegistrationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/RegistrationPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +122,7 @@
       <recent name="D:\Software engineering\CaringPlates\client\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.server [build]">
+  <component name="RunManager" selected="Spring Boot.ServerApplication">
     <configuration name="Caring-Plates [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -251,7 +240,7 @@
       <workItem from="1701236624369" duration="17247000" />
       <workItem from="1701355722836" duration="1035000" />
       <workItem from="1701407026932" duration="2074000" />
-      <workItem from="1701705271410" duration="9579000" />
+      <workItem from="1701705271410" duration="14912000" />
     </task>
     <task id="LOCAL-00001" summary="User login And User Regisration Page">
       <option name="closed" value="true" />
@@ -373,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701331456388</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="images and css">
+      <option name="closed" value="true" />
+      <created>1701718277937</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701718277938</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +413,8 @@
     <MESSAGE value="get in touch form" />
     <MESSAGE value="get in touch form css fix" />
     <MESSAGE value="naming changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="naming changes" />
+    <MESSAGE value="images and css" />
+    <option name="LAST_COMMIT_MESSAGE" value="images and css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

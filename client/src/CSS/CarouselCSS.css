@@ -70,6 +70,9 @@
     background-size: cover;
     background-position: center;
 }
+.carousel::-webkit-scrollbar {
+    display: none;
+}
 .carousel::before {
      content: "";
      position: absolute;
